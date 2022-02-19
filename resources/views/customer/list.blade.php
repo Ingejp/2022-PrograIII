@@ -4,11 +4,7 @@
     <div class="p-3 bg-white mb-3">
         <h3>Lista de Comercios</h3>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Nombre del comercio" id="nom_buscar">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary rounded-right" onclick="searchComercio()" id="btn-comercio" ><i class="fas fa-search"></i></button>
-            </div>
-            <button type="button" class="btn btn-success ml-5" onclick="goToEvents()"><i class="fas fa-plus text-white"></i> Nuevo</button>
+            <button type="button" class="btn btn-success ml-5" ><i class="fas fa-plus text-white"></i> Nuevo</button>
         </div>
         <div class="table-responsive">
             <table class="table table-hover">

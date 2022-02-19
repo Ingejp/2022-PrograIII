@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get( '/registrar' );
+Route::get( '/registrar', [\App\Http\Controllers\CustomerController::class, 'index' ] )->name('customer.index');

@@ -30,7 +30,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="#">Register</a></li>
-                                <li><a class="dropdown-item" href="#">List</a></li>
+                                <li><a class="dropdown-item" href="{{ route('customer.index')}}">List</a></li>
                             </ul>
                         </li>
                     </ul>
