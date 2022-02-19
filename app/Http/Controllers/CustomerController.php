@@ -13,6 +13,6 @@ class CustomerController extends Controller
     }
 
     public function register(){
-        return view(customer.)
+        return view('customer.create');
     }
 }

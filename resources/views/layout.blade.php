@@ -29,7 +29,7 @@
                                 Customer
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Register</a></li>
+                                <li><a class="dropdown-item" href="{{route('customer.register')}}">Register</a></li>
                                 <li><a class="dropdown-item" href="{{ route('customer.index')}}">List</a></li>
                             </ul>
                         </li>
@@ -38,6 +38,7 @@
             </div>
         </nav>
         <div class="container">
+            <br>
             @yield('contenido')
         </div>
     </body>

@@ -14,7 +14,6 @@
                     <th scope="col">NAME</th>
                     <th scope="col">ADDRESS</th>
                     <th scope="col">PHONE</th>
-                    <th scope="col" ></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -24,7 +23,6 @@
                         <td>{{$customer->name}}</td>
                         <td>{{$customer->address}}</td>
                         <td>{{$customer->phone_number}}</td>
-                        <td class="d-flex d-inline"><a href="/comercio=editar={{$customer->id}}"><i class="far fa-edit fa-lg"></i></a><a class="mx-3" href="#" ><i class="fas fa-trash-alt fa-lg text-danger" ></i></a></td>
                     </tr>
                 @endforeach
                 </tbody>
