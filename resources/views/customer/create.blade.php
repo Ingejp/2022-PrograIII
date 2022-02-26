@@ -1,18 +1,18 @@
 @extends('layout')
 @section('contenido')
-    <h2>Add New Customer</h2>
+    <h2>Registrar Nuevo Cliente</h2>
     <br>
     <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Name</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Customer name">
+        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
     </div>
     <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Address</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Complete address">
+        <label for="exampleFormControlInput1" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Dirección">
     </div>
     <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Phone</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Customer phone">
+        <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Teléfono">
     </div>
 
     <div class="mb-3">

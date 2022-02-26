@@ -2,7 +2,7 @@
 
 @section('contenido')
     <div class="p-3 bg-white mb-3">
-        <h3>Lista de Comercios</h3>
+        <h3>Lista de Clientes</h3>
         <div class="input-group mb-3">
             <button type="button" class="btn btn-success ml-5" ><i class="fas fa-plus text-white"></i> Nuevo</button>
         </div>
@@ -11,9 +11,9 @@
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">NAME</th>
-                    <th scope="col">ADDRESS</th>
-                    <th scope="col">PHONE</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">DIRECCIÓN</th>
+                    <th scope="col">TELEFONO</th>
                 </tr>
                 </thead>
                 <tbody>
