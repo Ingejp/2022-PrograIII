@@ -14,6 +14,7 @@
                     <th scope="col">NOMBRE</th>
                     <th scope="col">DIRECCIÓN</th>
                     <th scope="col">TELEFONO</th>
+                    <th scope="col">CATEGORIA</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -23,6 +24,7 @@
                         <td>{{$customer->name}}</td>
                         <td>{{$customer->address}}</td>
                         <td>{{$customer->phone_number}}</td>
+                        <td>{{$customer->category->description}}</td>
                     </tr>
                 @endforeach
                 </tbody>

@@ -9,4 +9,8 @@ class Category extends Model
 {
     public $table = 'category';
     use HasFactory;
+
+    public function customer(){
+        return $this->hasOne(Customer::class);
+    }
 }
