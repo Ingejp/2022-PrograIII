@@ -4,7 +4,7 @@
     <div class="p-3 bg-white mb-3">
         <h3>Lista de Clientes</h3>
         <div class="input-group mb-3">
-            <button type="button" class="btn btn-success ml-5" ><i class="fas fa-plus text-white"></i> Nuevo</button>
+            <a href="{{route('customer.register')}}" class="btn btn-success ml-5" > Nuevo <i class="fas fa-plus"></i></i></a>
         </div>
         <div class="table-responsive">
             <table class="table table-hover">

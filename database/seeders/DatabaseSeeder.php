@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Customer;
+use Database\Factories\CategoryFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,7 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // User::factory(10)->create();
-        Customer::create(array('name'=>'Juan Pablo Escobar',
+        /*Customer::create(array('name'=>'Juan Pablo Escobar',
             'address'=>'Avenida Principal calle hacia el exito No 3',
             'phone_number'=>'502 55555555'));
 
@@ -23,8 +24,8 @@ class DatabaseSeeder extends Seeder
         $customer->name='Jorge Morales';
         $customer->address='Avenida las americas';
         $customer->phone_number='502 12345678';
-        $customer->save();
-
+        $customer->save();*/
+        $this->call(CategorySeeder::class);
         $this->call(CustomerSeeder::class);
 
     }

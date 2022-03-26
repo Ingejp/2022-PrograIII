@@ -19,6 +19,7 @@ class CustomerFactory extends Factory
             'name'=>$this->faker->name,
             'address'=>$this->faker->address(),
             'phone_number'=>$this->faker->phoneNumber,
+            'category_id'=>$this->faker->randomDigit(1,10),
         ];
     }
 }
