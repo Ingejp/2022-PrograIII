@@ -45,14 +45,17 @@ class CustomerController extends Controller
                 'category_id' => $data['category'],
             ]);
         } catch (\Exception $exception) {
-            $message= " Excepción general ". $exception->getMessage();
-            return view('exceptions.exceptions', compact('message'));
+            $message=$exception->getMessage();
+            $tipoError=" Excepción General del Sistema ";
+            return view('exceptions.exceptions', compact('message', 'tipoError'));
         }catch (QueryException $queryException){
-            $message= " Excepción de SQL ". $queryException->getMessage();
-            return view('errors.404', compact('message'));
+            $message= $queryException->getMessage();
+            $tipoError=" Excepción de Base de Datos ";
+            return view('errors.404', compact('message', 'tipoError'));
         }catch (ModelNotFoundException $modelNotFoundException){
-            $message=" Excepción del Sistema ".$modelNotFoundException->getMessage();
-            return view('errors.404', compact('message'));
+            $message=$modelNotFoundException->getMessage();
+            $tipoError=" Excepción en el Servidor ";
+            return view('errors.404', compact('message', 'tipoError'));
         }
 
 
