@@ -1,6 +1,30 @@
 @extends('layout')
 
 @section('contenido')
+    @if (\Session::has('success'))
+        <div class="alert alert-success">
+            <ul>
+                <li>{!! \Session::get('success') !!}</li>
+            </ul>
+        </div>
+    @endif
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    @if(\Session::has('warning'))
+        <div class="alert alert-warning">
+            <ul>
+                <li>{!! \Session::get('warning') !!}</li>
+            </ul>
+        </div>
+    @endif
     <div class="p-3 bg-white mb-3">
         <h3>Lista de Clientes</h3>
         <div class="input-group mb-3">
@@ -15,6 +39,8 @@
                     <th scope="col">DIRECCIÓN</th>
                     <th scope="col">TELEFONO</th>
                     <th scope="col">CATEGORIA</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -25,6 +51,16 @@
                         <td>{{$customer->address}}</td>
                         <td>{{$customer->phone_number}}</td>
                         <td>{{$customer->category->description}}</td>
+                        <td >
+                            <a href="{{$customer->id}}" class="btn btn-warning">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                        </td>
+                        <td >
+                            <a href="{{route('customer.delete', $customer->id )}}" class="btn btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>

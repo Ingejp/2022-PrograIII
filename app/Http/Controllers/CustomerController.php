@@ -21,6 +21,27 @@ class CustomerController extends Controller
         return view('customer.create', compact('categories'));
     }
 
+    public function edit(Request $request, $id){
+
+    }
+
+    public function delete(Request $request, $id){
+        try{
+            $customer=Customer::find($id);
+            $customer->delete();
+        }catch (\Exception $exception) {
+            $message=$exception->getMessage();
+            $tipoError=" Excepción General del Sistema ";
+            return view('exceptions.exceptions', compact('message', 'tipoError'));
+        }catch (QueryException $queryException){
+            $message= $queryException->getMessage();
+            $tipoError=" Excepción de Base de Datos ";
+            return view('errors.404', compact('message', 'tipoError'));
+        }
+        return redirect()->route('customer.index')->with('success', 'Registro eliminado exitosamente');
+
+    }
+
     public function store(Request $request){
         $data = request()->validate([
             'name' => 'required|max:75',
