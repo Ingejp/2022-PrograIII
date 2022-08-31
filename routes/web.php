@@ -22,3 +22,7 @@ Route::get('/registrar',[\App\Http\Controllers\CustomerController::class, 'regis
 Route::post('/crear',[\App\Http\Controllers\CustomerController::class, 'store'])->name('customer.create');
 Route::post('/editar/{id}',[\App\Http\Controllers\CustomerController::class, 'edit'])->name('customer.edit');
 Route::get('/eliminar/{id}',[\App\Http\Controllers\CustomerController::class, 'delete'])->name('customer.delete');
+Route::get('/ejemplo', [\App\Http\Controllers\NuevoController::class, 'datos'])->name('ejemplo');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

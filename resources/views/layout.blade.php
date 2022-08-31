@@ -28,6 +28,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="{{route('customer.register')}}">Registrar</a></li>
                                 <li><a class="dropdown-item" href="{{ route('customer.index')}}">Lista de Clientes</a></li>
+                                <li><a class="dropdown-item" href="{{route('ejemplo')}}">Ruta de Ejemplo</a></li>
                             </ul>
                         </li>
                     </ul>
